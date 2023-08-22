@@ -1,0 +1,10 @@
+name: triggeroncreatingnewissue
+on:
+ issues:
+  types: [opened]
+jobs:
+ commentswithid:
+  runs-on: ubuntu-latest
+   steps:
+    - name: dump contenet
+      run: echo "${{github.event}}"
